@@ -1,0 +1,31 @@
+.header {
+  background-color: #212121;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2.25rem 0;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.links li a {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.contact {
+  font-size: 1.5rem;
+  padding: .5rem 1.5rem;
+  background-color: #C8882C;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
