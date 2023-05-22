@@ -1,4 +1,5 @@
 import './App.css'
+import Benefits from './components/Benefits'
 import Header from './components/Header'
 import Home from './components/Home'
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <main>
         <Home />
+        <Benefits />
       </main>
     </>
   )
