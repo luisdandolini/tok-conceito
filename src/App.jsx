@@ -2,6 +2,7 @@ import './App.css'
 import Benefits from './components/Benefits'
 import Header from './components/Header'
 import Home from './components/Home'
+import Products from './components/Products'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Home />
         <Benefits />
+        <Products />
       </main>
     </>
   )
