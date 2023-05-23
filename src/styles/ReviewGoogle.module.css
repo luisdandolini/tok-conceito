@@ -1,0 +1,65 @@
+.container_google { 
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.container_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 370px;
+  width: 280px;
+  border: 2px solid #C8882C;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 8px 0px #00000040;
+}
+
+.people { 
+  width: 80px;
+  height: 80px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #C8882C;
+}
+
+.container_star {
+  margin-bottom: 1rem;
+}
+
+.comment {
+  padding: 0 1.5rem;
+}
+
+.logo_google {
+  position: relative;
+  bottom: -28px;
+  right: -108px;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.details_bottom {
+  position: relative;
+}
+
+.details_bottom::after {
+  content: "";
+  display: block;
+  height: 8px;
+  width: 452px;
+  background-color: #212121;
+  position: absolute;
+  right: 0;
+  top: 130px;
+}
