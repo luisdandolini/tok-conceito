@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Products from './components/Products'
 import ReviewGoogle from './components/ReviewGoogle'
+import About from './components/About'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Benefits />
         <Products />
         <ReviewGoogle />
+        <About />
       </main>
     </>
   )

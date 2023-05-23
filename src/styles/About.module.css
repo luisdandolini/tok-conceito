@@ -1,0 +1,37 @@
+.about {
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75rem;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
+  box-shadow: #C8882C 16px 16px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #C8882C;
+  margin-bottom: 3rem;
+}
+
+.text {
+  width: 700px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+
+}
+
+.text_bottom {
+  width: 700px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
