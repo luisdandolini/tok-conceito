@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Products from './components/Products'
 import ReviewGoogle from './components/ReviewGoogle'
 import About from './components/About'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Products />
         <ReviewGoogle />
         <About />
+        <Contact />
       </main>
     </>
   )
