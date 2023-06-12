@@ -44,7 +44,7 @@
 .img {
   position: relative;
   width: 514px;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .img:last-child {
@@ -52,7 +52,9 @@
 }
 
 .img img {
-  width: 100%;
+  width: 530px;
+  height: 360px;
+  object-fit: cover;
 }
 
 .img:hover .imgText {

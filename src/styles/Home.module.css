@@ -37,14 +37,14 @@
   height: 353px;
   position: relative;
   top: -50px;
-  left: -135px;
+  left: -120px;
 }
 
 .img_second {
   width: 222px;
   height: 353px;
   position: relative;
-  left: -115px;
+  left: -100px;
   top: 40px;
 }
 
@@ -64,6 +64,7 @@
   width: 700px;
   color: #FFFFFF;
   font-size: 2rem;
+  margin-top: 3rem ;
 }
 
 @media(min-width: 1600px) {
