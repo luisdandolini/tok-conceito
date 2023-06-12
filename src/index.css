@@ -12,3 +12,25 @@ a {
 li, ul {
   list-style-type: none;
 }
+
+.swiper-wrapper {
+  max-width: 1200px !important;
+}
+
+.swiper-button-prev {
+  background-image: url('../src/assets/left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent;
+  top: 200px;
+}
+
+.swiper-button-next {
+  background-image: url('../src/assets/right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: transparent;
+  top: 200px;
+}
