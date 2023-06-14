@@ -44,8 +44,6 @@ function HeaderMobile() {
                     <button>Fale conosco</button>
                   </div>
                 </div>
-                <div className={styles.details_top}></div>
-                <div className={styles.details_bottom}></div>
               </>
             }
           </div>

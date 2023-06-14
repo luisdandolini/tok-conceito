@@ -78,35 +78,3 @@
   border: none;
   border-radius: .5rem;
 }
-
-.details_top {
-  position: relative;
-  z-index: 999;
-}
-
-.details_top::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 250px;
-  background-color: #C8882C;
-  position: absolute;
-  right: 115px;
-  top: 30px;
-}
-
-.details_bottom {
-  position: relative;
-  z-index: 999;
-}
-
-.details_bottom::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 250px;
-  background-color: #C8882C;
-  position: absolute;
-  right: -48px;
-  bottom: -665px;
-}
