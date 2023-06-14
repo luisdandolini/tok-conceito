@@ -7,7 +7,6 @@ import ReviewGoogle from './components/ReviewGoogle'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import HeaderMobile from './components/mobile/HeaderMobile'
 
 function App() {
 
@@ -20,9 +19,9 @@ function App() {
         <Products />
         <ReviewGoogle />
         <About />
-        {/* <Contact /> */}
+        <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

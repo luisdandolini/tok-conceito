@@ -73,3 +73,43 @@
   font-size: 1.3rem;
   font-weight: 600;
 }
+
+@media(max-width: 980px) {
+  .footer {
+    flex-direction: column;
+  }
+  .title {
+    margin-top: 4rem;
+    margin-left: 1.5rem;
+  }
+  .text {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    width: 350px;
+    margin-left: 1.5rem;
+  }
+  .container_inputs {
+    margin-top: 0rem;
+  }
+  .container_mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input,
+  .input_mensage {
+    width: 350px;
+  }
+  .input_mensage {
+    margin-top: -3rem;
+  }
+  .send {
+    width: 200px;
+    height: 45px;
+  }
+  .container_button_mobile {
+    display: flex;
+    justify-content: center;
+  }
+}

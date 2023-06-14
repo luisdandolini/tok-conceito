@@ -39,6 +39,7 @@
 @media(max-width: 980px) {
   .about {
     margin-top: 2rem;
+    margin-bottom: 4rem;
     flex-direction: column;
   }
   .title_about {

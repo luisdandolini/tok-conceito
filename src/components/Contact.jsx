@@ -44,7 +44,7 @@ const Contact = () => {
       
       <form onSubmit={sendEmail}>
         <div className={styles.container_inputs}>
-          <div>
+          <div className={styles.container_mobile}>
             <input 
               className={styles.input} 
               type="text" 
@@ -60,11 +60,11 @@ const Contact = () => {
               value={email}
             />
           </div>
-          <div>
+          <div className={styles.container_mobile}>
             <input className={styles.input} type="tel" placeholder="Telefone"/>
             <input className={styles.input} type="text" placeholder="Assunto"/>
           </div>
-          <div>
+          <div className={styles.container_mobile}>
             <input 
               className={styles.input_mensage} 
               type="text" 
@@ -73,13 +73,15 @@ const Contact = () => {
               value={message}
             />
           </div>
-          <button 
-            className={styles.send}
-            type="submit"
-            value="Enviar"
-          >
-            Enviar
-          </button>
+          <div className={styles.container_button_mobile}>
+            <button 
+              className={styles.send}
+              type="submit"
+              value="Enviar"
+            >
+              Enviar
+            </button>
+          </div>
         </div>
       </form>
     </section>
