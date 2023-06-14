@@ -74,3 +74,42 @@
   right: -66px;
   bottom: -336px;
 }
+
+@media(max-width: 393px) {
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 250px;
+    background-color: #C8882C;
+    position: absolute;
+    right: -56px;
+    bottom: -336px;
+  }
+}
+
+@media(max-width: 390px) {
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 250px;
+    background-color: #C8882C;
+    position: absolute;
+    right: -54px;
+    bottom: -336px;
+  }
+}
+
+@media(max-width: 375px) {
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 250px;
+    background-color: #C8882C;
+    position: absolute;
+    right: -46px;
+    bottom: -336px;
+  }
+}
