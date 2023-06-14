@@ -1,8 +1,22 @@
 import styles from "../styles/Home.module.css";
 import ImageFirst from "../assets/image_home1.png";
 import ImageSecond from "../assets/image_home2.png";
+import { useMediaQuery } from 'react-responsive';
+import HomeMobile from "./mobile/HomeMobile";
+import { useState, useEffect } from 'react';
 
 const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
+
+  useEffect(() => {
+    setIsMobile(isMobileQuery);
+  }, [isMobileQuery]);
+
+  if (isMobile) {
+    return <HomeMobile />;
+  }
+
   return(
     <section className={styles.home}>
       <div className={styles.details_top}></div>
