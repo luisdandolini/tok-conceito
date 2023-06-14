@@ -1,25 +1,20 @@
-import styles from "../styles/Benefits.module.css";
-import Vector from "../assets/Vector.svg";
-import Truck from "../assets/truck.svg";
-import Award from "../assets/award.svg";
-import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
-import BenefitsMobile from "./mobile/BenefitsMobile";
+import { useRef, useEffect } from 'react';
+import styles from '../../styles/BenefitsMobile.module.css';
+import Vector from "../../assets/Vector.svg";
+import Truck from "../../assets/truck.svg";
+import Award from "../../assets/award.svg";
 
-const Benefits = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
+const BenefitsMobile = () => {
+  const centeredContentRef = useRef(null); // Cria a referência
 
   useEffect(() => {
-    setIsMobile(isMobileQuery);
-  }, [isMobileQuery]);
-
-  if (isMobile) {
-    return <BenefitsMobile />;
-  }
+    const container = centeredContentRef.current.parentNode;
+    const scrollLeft = centeredContentRef.current.offsetLeft - (container.offsetWidth / 2) + (centeredContentRef.current.offsetWidth / 2);
+    container.scrollLeft = scrollLeft;
+  }, []);
 
   return(
-    <section className={styles.benefits}>
+    <section className={styles.bg}>
       <div className={styles.container_benefits}>
         <div className={styles.content}>
           <img src={Award} alt="" />
@@ -29,7 +24,7 @@ const Benefits = () => {
           </div>
         </div>
 
-        <div className={styles.content}>
+        <div className={styles.content} ref={centeredContentRef}>
           <img src={Vector} alt="" />
           <div>
             <p className={styles.title}>Garantia extendida</p>
@@ -49,4 +44,4 @@ const Benefits = () => {
   )
 }
 
-export default Benefits;
+export default BenefitsMobile
