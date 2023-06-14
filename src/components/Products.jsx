@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect  } from "react";
 import styles from "../styles/Products.module.css";
 import Americana from "../assets/cortinas/prega-americana.jpeg";
 import Macho from "../assets/cortinas/prega-macho.jpeg";
@@ -11,6 +11,13 @@ import Romana from "../assets/persianas/romana.png";
 
 const Products = () => {
   const [product, setProduct] = useState("Cortinas");
+  const centeredButtonRef = useRef(null);
+
+  useEffect(() => {
+    const container = centeredButtonRef.current.parentNode;
+    const scrollLeft = centeredButtonRef.current.offsetLeft - (container.offsetWidth / 2) + (centeredButtonRef.current.offsetWidth / 2);
+    container.scrollLeft = scrollLeft;
+  }, []);
 
   return(
     <section>
@@ -22,7 +29,7 @@ const Products = () => {
         </button>
         <button 
         onClick={() => setProduct("Persianas")}
-        className={product === "Persianas" ? styles.selected : ''}>
+        className={product === "Persianas" ? styles.selected : ''} ref={centeredButtonRef}>
           Persianas
         </button>
         <button 
