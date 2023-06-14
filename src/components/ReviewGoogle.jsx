@@ -7,20 +7,45 @@ import Denise from '../assets/people/Denise.png';
 import Janete from '../assets/people/Janete.png';
 import Carolina from '../assets/people/Carolina.png';
 import Google from "../assets/google.svg";
-// import Previous from "../assets/left.svg";
-// import Next from "../assets/right.svg";
 import Star from "../assets/star.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "../styles/ReviewGoogle.module.css";
 import { Navigation } from "swiper";
+import { useState, useEffect } from 'react';
 
 export default function ReviewGoogle() {
+  const [slidesPerView, setSlidesPerView] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 980) {
+        setSlidesPerView(1);
+      } else {
+        setSlidesPerView(4);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <>
+      {
+        window.innerWidth < 980 ? <h1 className={styles.title}>Depoimentos</h1> : <></>
+      }
       <section className={styles.container_google}>
-        <Swiper navigation={true} slidesPerView={4} modules={[Navigation]} spaceBetween={20} className="mySwiper">
+      <Swiper 
+            navigation={true} 
+            modules={[Navigation]} 
+            spaceBetween={20} 
+            slidesPerView={slidesPerView}
+            className="mySwiper"
+        >
           <SwiperSlide>
             <div className={styles.container_review}>
               <img className={styles.people} src={Viridiani} alt="" />

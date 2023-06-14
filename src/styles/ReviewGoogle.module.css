@@ -99,3 +99,30 @@
   right: 0;
   top: 130px;
 }
+
+@media(max-width: 980px) {
+  .container_google  {
+    margin-top: 0rem;
+  }
+  .container_review {
+    margin: auto;
+  }
+  .title {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: right;
+    color: #C8882C;
+    font-size: 2.2rem;
+  }
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 250px;
+    background-color: #212121;
+    position: absolute;
+    right: 0;
+    top: 60px;
+  }
+}

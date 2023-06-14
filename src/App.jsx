@@ -18,8 +18,8 @@ function App() {
         <Home />
         <Benefits />
         <Products />
-        {/* <ReviewGoogle />
-        <About />
+        <ReviewGoogle />
+        {/* <About />
         <Contact /> */}
       </main>
       {/* <Footer /> */}
