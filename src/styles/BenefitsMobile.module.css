@@ -16,6 +16,7 @@
   gap: 1rem;
   overflow-x: auto;        
   white-space: nowrap; 
+  padding-bottom: 2.5rem;
 }
 
 .content {
