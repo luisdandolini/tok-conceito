@@ -77,4 +77,6 @@
   background-color: #C8882C;
   border: none;
   border-radius: .5rem;
+  color: #212121;
+  -webkit-text-fill-color: #212121;
 }
