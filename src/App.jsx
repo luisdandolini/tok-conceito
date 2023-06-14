@@ -19,8 +19,8 @@ function App() {
         <Benefits />
         <Products />
         <ReviewGoogle />
-        {/* <About />
-        <Contact /> */}
+        <About />
+        {/* <Contact /> */}
       </main>
       {/* <Footer /> */}
     </>
