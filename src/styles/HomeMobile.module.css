@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -1rem;
 }
 
 .container_content {
@@ -34,13 +35,14 @@
 }
 
 .text {
-  color: #FFF;
+  color: #c4c4c4;
   font-weight: 300;
   font-size: 1.25rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   text-align: center;
   width: 280px;
+  line-height: 1.8rem;
 }
 
 .details_top {
@@ -72,7 +74,7 @@
   background-color: #C8882C;
   position: absolute;
   right: -66px;
-  bottom: -336px;
+  bottom: -358px;
 }
 
 @media(max-width: 393px) {
