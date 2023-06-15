@@ -65,9 +65,8 @@ const Contact = () => {
             <input className={styles.input} type="text" placeholder="Assunto"/>
           </div>
           <div className={styles.container_mobile}>
-            <input 
+            <textarea 
               className={styles.input_mensage} 
-              type="text" 
               placeholder="Mensagem"
               onChange={(e) => setMessage(e.target.value)}
               value={message}
