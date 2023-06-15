@@ -149,4 +149,20 @@
     justify-content: center;
     margin-bottom: 2rem;
   }
+  
+  .input_mensage,
+  .input {
+    border-bottom: 1px solid #C4C4C4;
+  }
+  .input_mensage::placeholder,
+  .input::placeholder {
+    color: #C4C4C4;
+    top: 48px;
+    left: 20px;
+  }
+  .input::placeholder {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+  }
 }
