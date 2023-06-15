@@ -57,7 +57,7 @@
 
 .input_mensage::placeholder {
   position: absolute;
-  top: 52px;
+  top: 0px;
   left: 0;
   color: #F2F2F2;
   font-size: 1.25rem;
@@ -112,21 +112,6 @@
     display: flex;
     justify-content: center;
   }
-  /* .input_mensage,
-  .input {
-    border-bottom: 1px solid #C4C4C4;
-  }
-  .input_mensage::placeholder,
-  .input::placeholder {
-    color: #C4C4C4;
-    top: 48px;
-    left: 20px;
-  }
-  .input::placeholder {
-    position: absolute;
-    top: 0px;
-    left: 20px;
-  } */
 }
 
 @media(max-width: 1380px) {
@@ -149,20 +134,4 @@
     justify-content: center;
     margin-bottom: 2rem;
   }
-  
-  /* .input_mensage,
-  .input {
-    border-bottom: 1px solid #C4C4C4;
-  }
-  .input_mensage::placeholder,
-  .input::placeholder {
-    color: #C4C4C4;
-    top: 48px;
-    left: 20px;
-  }
-  .input::placeholder {
-    position: absolute;
-    top: 0px;
-    left: 20px;
-  } */
 }
