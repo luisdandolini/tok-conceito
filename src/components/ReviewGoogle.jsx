@@ -17,13 +17,36 @@ import { useState, useEffect } from 'react';
 
 export default function ReviewGoogle() {
   const [slidesPerView, setSlidesPerView] = useState(4);
+  const [spaceBetween, setSpaceBetween] = useState(-60);  // novo estado para spaceBetween
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 980) {
+  //       setSlidesPerView(1);
+  //       setSpaceBetween(20);  // definir spaceBetween para o valor desejado para telas pequenas
+  //     } else {
+  //       setSlidesPerView(4);
+  //       setSpaceBetween(-60);  // definir spaceBetween para o valor desejado para telas grandes
+  //     }
+  //   };
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 980) {
+      if (window.innerWidth < 480) {  // para telas muito pequenas
         setSlidesPerView(1);
-      } else {
+        setSpaceBetween(20);
+      } else if (window.innerWidth < 980) {  // para telas pequenas
+        setSlidesPerView(2);
+        setSpaceBetween(20);
+      } else if (window.innerWidth < 1380) {  // para telas médias
+        setSlidesPerView(3);
+        setSpaceBetween(-30);
+      } else if (window.innerWidth < 1480) {  // para telas médias
         setSlidesPerView(4);
+        setSpaceBetween(-60);
+      } else { 
+        setSlidesPerView(4);
+        setSpaceBetween(-60);
       }
     };
 
@@ -42,7 +65,7 @@ export default function ReviewGoogle() {
       <Swiper 
             navigation={true} 
             modules={[Navigation]} 
-            spaceBetween={20} 
+            spaceBetween={spaceBetween} 
             slidesPerView={slidesPerView}
             className="mySwiper"
         >
@@ -95,7 +118,7 @@ export default function ReviewGoogle() {
                 Perfeição, carinho, amor e dedicação! Maravilhada com a delicadeza e os acabamentos das cortinas, colcha e almofadas!
                 Parabéns a equipe da Tok Conceito.
               </p>
-              <img className={styles.logo_google_rosimar} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -112,7 +135,7 @@ export default function ReviewGoogle() {
               <p className={styles.comment}>
               5 estrelas é pouco para essa empresa nota MIL. Eu amei o trabalho deles, tudo perfeito. Atendimento, pontualidade, comprometimento, poduto de qualidade, preço justo e super caprichosos. Obrigada Júlia e Thiago vcs são DEMAISSS.
               </p>
-              <img className={styles.logo_google_alana} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -129,7 +152,7 @@ export default function ReviewGoogle() {
               <p className={styles.comment}>
               Atendimento excelente, e responsáveis! Entregam no prazo, trabalho perfeito e de altíssima qualidade!! Recomendo muito. 👏🏼
               </p>
-              <img className={styles.logo_google_giovana} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -145,7 +168,7 @@ export default function ReviewGoogle() {
               </div>
               <p className={styles.comment}>
               Amei o atendimento e trabalho final, fiz 2 cortinas em diferentes ambientes e estou amando. Com certeza vamos fechar outros serviços.😚            </p>
-              <img className={styles.logo_google_denise} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -162,7 +185,7 @@ export default function ReviewGoogle() {
               <p className={styles.comment}>
               Empresa de excelente atendimento e qualidade!!! Super indico!!! Muito obrigada pela competência e dedicação 🙏👏👏
               </p>
-              <img className={styles.logo_google_janete} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -179,7 +202,7 @@ export default function ReviewGoogle() {
               <p className={styles.comment}>
               Atendimento excelente, cortina ficou linda ❤️
               </p>
-              <img className={styles.logo_google_carolina} src={Google} alt="" />
+              <img className={styles.logo_google} src={Google} alt="" />
             </div>
           </SwiperSlide>
         </Swiper>

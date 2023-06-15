@@ -14,7 +14,7 @@ li, ul {
 }
 
 .swiper-wrapper {
-  max-width: 1200px !important;
+  max-width: 1500px !important;
 }
 
 .swiper-button-prev {
@@ -33,4 +33,17 @@ li, ul {
   background-size: contain;
   color: transparent;
   top: 200px;
+}
+
+.swiper-slide {
+  margin-left: 0rem !important;
+}
+
+@media(max-width: 1480px) {
+  .swiper-button-next {
+    right: 30px !important;
+  }
+  .swiper-button-prev {
+    left: 30px !important;
+  }
 }

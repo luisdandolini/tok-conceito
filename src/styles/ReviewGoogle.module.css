@@ -15,6 +15,7 @@
   border: 2px solid #C8882C;
   border-radius: .5rem;
   box-shadow: 0px 4px 8px 0px #00000040;
+  margin: auto;
 }
 
 .people { 
@@ -37,47 +38,12 @@
 
 .comment {
   padding: 0 1.5rem;
+  height: 140px;
 }
 
 .logo_google {
   position: relative;
-  bottom: -28px;
-  right: -108px;
-}
-
-.logo_google_rosimar {
-  position: relative;
-  bottom: -49px;
-  right: -108px;
-}
-
-.logo_google_alana {
-  position: relative;
   bottom: -10px;
-  right: -108px;
-}
-
-.logo_google_giovana {
-  position: relative;
-  bottom: -68px;
-  right: -108px;
-}
-
-.logo_google_denise {
-  position: relative;
-  bottom: -49px;
-  right: -108px;
-}
-
-.logo_google_janete {
-  position: relative;
-  bottom: -70px;
-  right: -108px;
-}
-
-.logo_google_carolina {
-  position: relative;
-  bottom: -106px;
   right: -108px;
 }
 
