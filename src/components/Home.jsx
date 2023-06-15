@@ -1,6 +1,8 @@
 import styles from "../styles/Home.module.css";
-import ImageFirst from "../assets/image_home1.png";
-import ImageSecond from "../assets/image_home2.png";
+import Image4 from "../assets/cortinas/prega-macho.jpeg";
+import Image5 from "../assets/cortinas/pregra-wave.jpeg";
+import Image6 from "../assets/persianas/rolo.jpeg";
+import Image7 from "../assets/persianas/romana.png";
 import { useMediaQuery } from 'react-responsive';
 import HomeMobile from "./mobile/HomeMobile";
 import { useState, useEffect } from 'react';
@@ -8,6 +10,15 @@ import { useState, useEffect } from 'react';
 const Home = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
+  const [images, setImages] = useState([Image4, Image5, Image6, Image7]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [images]);
 
   useEffect(() => {
     setIsMobile(isMobileQuery);
@@ -28,8 +39,8 @@ const Home = () => {
         </div>
         
         <div>
-          <img className={styles.img_first} src={ImageFirst} alt="Foto do trabalho da Tok Conceito" />
-          <img className={styles.img_second} src={ImageSecond} alt="Foto do trabalho da Tok Conceito" />
+          <img className={styles.img_first} src={images[index % images.length]} alt="Foto do trabalho da Tok Conceito" />
+          <img className={styles.img_second} src={images[(index + 1) % images.length]} alt="Foto do trabalho da Tok Conceito" />    
         </div>
       </div>
 
