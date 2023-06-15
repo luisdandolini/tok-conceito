@@ -20,7 +20,7 @@ const Products = () => {
   }, []);
 
   return(
-    <section>
+    <section id="product">
       <div className={styles.container_buttons}>
         <button 
         onClick={() => setProduct("Cortinas")}

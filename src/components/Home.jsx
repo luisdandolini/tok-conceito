@@ -29,7 +29,7 @@ const Home = () => {
   }
 
   return(
-    <section className={styles.home}>
+    <section className={styles.home} id="home">
       <div className={styles.details_top}></div>
 
       <div className={styles.container_content}>

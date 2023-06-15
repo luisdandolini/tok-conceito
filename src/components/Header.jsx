@@ -8,6 +8,12 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
 
+  const smoothScroll = (sectionId) => {
+    document.querySelector(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     setIsMobile(isMobileQuery);
   }, [isMobileQuery]);
@@ -21,12 +27,12 @@ const Header = () => {
       <nav className={styles.nav}>
         <img src={Logo} />
         <ul className={styles.links}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Produtos</a></li>
-          <li><a href="/">Depoimentos</a></li>
-          <li><a href="/">Sobre nós</a></li>
-          <li><a href="/">Contato</a></li>
-        </ul>
+          <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#home")}>Home</a></li>
+          <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#product")}>Produtos</a></li>
+          <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#review")}>Depoimentos</a></li>
+          <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#about")}>Sobre nós</a></li>
+          <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#contact")}>Contato</a></li>
+        </ul> 
         <button className={styles.contact}>Fale conosco</button>
       </nav> 
     </header> 

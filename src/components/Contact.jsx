@@ -33,7 +33,7 @@ const Contact = () => {
   }
 
   return(
-    <section className={styles.footer}>
+    <section className={styles.footer} id="contact">
       <div>
         <p className={styles.title}>Entre em contato!</p>
         <p className={styles.text}>

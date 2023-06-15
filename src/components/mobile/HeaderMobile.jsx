@@ -8,6 +8,12 @@ function HeaderMobile() {
   const [openMenu, setOpenMenu] = useState(false)
   const handleToggle = () => setOpenMenu(!openMenu);
 
+  const smoothScroll = (sectionId) => {
+    document.querySelector(sectionId).scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     if (openMenu) {
       document.body.style.overflow = 'hidden';
@@ -42,11 +48,11 @@ function HeaderMobile() {
               <>
                 <div  className={styles.menu_itens}>
                   <ul className={styles.links}>
-                    <li><a>Home</a></li>
-                    <li><a>Produtos</a></li>
-                    <li><a>Depoimentos</a></li>
-                    <li><a>Sobre nós</a></li>
-                    <li><a>Contato</a></li>
+                    <li><a onClick={() => smoothScroll("#home")}>Home</a></li>
+                    <li><a onClick={() => smoothScroll("#product")}>Produtos</a></li>
+                    <li><a onClick={() => smoothScroll("#review")}>Depoimentos</a></li>
+                    <li><a onClick={() => smoothScroll("#about")}>Sobre nós</a></li>
+                    <li><a onClick={() => smoothScroll("#contact")}>Contato</a></li>
                   </ul>
                   <div className={styles.container_button}>
                     <button>Fale conosco</button>

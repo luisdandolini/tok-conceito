@@ -7,7 +7,7 @@ const About = () => {
       {
         window.innerWidth < 780 ?  <h1 className={styles.title_about}>Sobre nós</h1> : <></>
       }
-      <section className={styles.about}>
+      <section className={styles.about} id="about">
         <img className={styles.img} src={AboutImg} alt="" />
 
         <div>

@@ -50,7 +50,7 @@ export default function ReviewGoogle() {
       {
         window.innerWidth < 980 ? <h1 className={styles.title}>Depoimentos</h1> : <></>
       }
-      <section className={styles.container_google}>
+      <section className={styles.container_google} id='review'>
       <Swiper 
             navigation={true} 
             modules={[Navigation]} 
