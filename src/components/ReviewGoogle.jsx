@@ -25,7 +25,7 @@ export default function ReviewGoogle() {
         setSlidesPerView(1);
         setSpaceBetween(20);
       } else if (window.innerWidth < 980) {  // para telas pequenas
-        setSlidesPerView(2);
+        setSlidesPerView(1);
         setSpaceBetween(20);
       } else if (window.innerWidth < 1380) {  // para telas médias
         setSlidesPerView(3);
