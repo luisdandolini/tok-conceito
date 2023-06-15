@@ -10,7 +10,7 @@ import Rolo from "../assets/persianas/rolo.jpeg";
 import Romana from "../assets/persianas/romana.png";
 
 const Products = () => {
-  const [product, setProduct] = useState("Cortinas");
+  const [product, setProduct] = useState("Persianas");
   const centeredButtonRef = useRef(null);
 
   useEffect(() => {

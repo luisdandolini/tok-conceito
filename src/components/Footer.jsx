@@ -1,5 +1,5 @@
 import styles from "../styles/Footer.module.css";
-import Logo from "../assets/Logo.svg";
+import Logo from '../assets/logo_mobile.png';
 import Instagram from "../assets/instagram.svg";
 import Facebook from "../assets/facebook.svg";
 import Email from "../assets/mail.svg";

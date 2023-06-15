@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import styles from '../../styles/HeaderMobile.module.css';
-import Logo from '../../assets/Logo.svg';
+import Logo from '../../assets/logo_mobile.png';
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
 
