@@ -61,6 +61,7 @@
 
 .content_text p {
   font-family: 'Inter', sans-serif;
+  font-weight: 300;
   width: 700px;
   color: #FFFFFF;
   font-size: 2rem;
