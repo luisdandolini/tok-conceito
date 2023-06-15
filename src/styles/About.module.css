@@ -36,6 +36,13 @@
   margin-bottom: 2rem;
 }
 
+@media(max-width: 1380px) {
+  .text,
+  .text_bottom {
+    width: 500px;
+  }
+}
+
 @media(max-width: 980px) {
   .about {
     margin-top: 2rem;

@@ -36,3 +36,21 @@
   font-size: 1rem;
   color: #CFCFCF;
 }
+
+@media(max-width: 1380px) {
+  .content {
+    width: 320px;
+    border: 3px solid #CFCFCF;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container_benefits {
+    gap: 1rem;
+  }
+  .text { 
+    font-size: .9rem;
+  }
+}

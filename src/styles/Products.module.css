@@ -101,6 +101,23 @@
   }
 }
 
+@media(max-width: 1380px) {
+  .img {
+    position: relative;
+    width: 420px;
+    margin-right: 2rem;
+  }
+  .container_buttons button {
+    width: 205px;
+  }
+  .img img {
+    width: 420px;
+    height: 360px;
+    object-fit: cover;
+  }
+  
+}
+
 @media(max-width: 980px) {
   .container_buttons {
     display: flex;

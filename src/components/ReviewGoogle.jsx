@@ -19,17 +19,6 @@ export default function ReviewGoogle() {
   const [slidesPerView, setSlidesPerView] = useState(4);
   const [spaceBetween, setSpaceBetween] = useState(-60);  // novo estado para spaceBetween
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (window.innerWidth < 980) {
-  //       setSlidesPerView(1);
-  //       setSpaceBetween(20);  // definir spaceBetween para o valor desejado para telas pequenas
-  //     } else {
-  //       setSlidesPerView(4);
-  //       setSpaceBetween(-60);  // definir spaceBetween para o valor desejado para telas grandes
-  //     }
-  //   };
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 480) {  // para telas muito pequenas
