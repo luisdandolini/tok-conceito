@@ -57,7 +57,7 @@
 
 .input_mensage::placeholder {
   position: absolute;
-  top: 0px;
+  top: 52px;
   left: 0;
   color: #F2F2F2;
   font-size: 1.25rem;
@@ -97,12 +97,12 @@
     justify-content: center;
     align-items: center;
   }
+  .input_mensage {
+    margin-top: -3rem;
+  }
   .input,
   .input_mensage {
     width: 350px;
-  }
-  .input_mensage {
-    margin-top: -3rem;
   }
   .send {
     width: 200px;
