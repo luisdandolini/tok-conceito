@@ -19,7 +19,7 @@ const Header = () => {
   return(
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <img src={Logo} alt="Logo Tok Conceito" />
+        <img src={Logo} />
         <ul className={styles.links}>
           <li><a href="/">Home</a></li>
           <li><a href="/">Produtos</a></li>
