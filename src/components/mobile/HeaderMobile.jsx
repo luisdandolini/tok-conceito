@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import  { useState, useEffect } from 'react';
 import styles from '../../styles/HeaderMobile.module.css';
 import Logo from '../../assets/logo_mobile.png';
 import Icon from '@mdi/react';
@@ -7,6 +7,14 @@ import { mdiClose } from '@mdi/js';
 function HeaderMobile() {
   const [openMenu, setOpenMenu] = useState(false)
   const handleToggle = () => setOpenMenu(!openMenu);
+
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [openMenu]);
 
   return (
     <div className={styles.container_header}>
