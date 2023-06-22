@@ -39,6 +39,12 @@ li, ul {
   margin-left: 0rem !important;
 }
 
+/* CAROUSEL */
+
+.carousel-status {
+  display: none !important;
+}
+
 @media(max-width: 1480px) {
   .swiper-button-next {
     right: 16px !important;
@@ -46,4 +52,10 @@ li, ul {
   .swiper-button-prev {
     left: 16px !important;
   }
+}
+
+@media(max-width: 780px) {
+  .slider-wrapper.axis-horizontal{
+    height: 460px !important;
+  }  
 }
