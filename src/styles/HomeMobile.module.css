@@ -77,6 +77,29 @@
   bottom: -358px;
 }
 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeInOut {
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+}
+
 @media(max-width: 393px) {
   .details_bottom::after {
     content: "";
