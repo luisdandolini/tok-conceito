@@ -12,6 +12,7 @@ import Romana from "../assets/persianas/romana.png";
 const Products = () => {
   const [product, setProduct] = useState("Persianas");
   const centeredButtonRef = useRef(null);
+  const buttonRefs = useRef([]);
 
   useEffect(() => {
     const container = centeredButtonRef.current.parentNode;
@@ -19,28 +20,52 @@ const Products = () => {
     container.scrollLeft = scrollLeft;
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const buttonWidth = buttonRefs.current[0].offsetWidth;
+      const scrollPos = buttonRefs.current[0].parentNode.scrollLeft;
+      const index = Math.round(scrollPos / buttonWidth);
+  
+      setProduct(["Cortinas", "Persianas", "Tapetes", "Enxovais"][index]);
+    };
+  
+    const container = buttonRefs.current[0].parentNode;
+    container.addEventListener('scroll', handleScroll);
+  
+    handleScroll();
+  
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return(
     <section id="product">
       <div className={styles.container_buttons}>
         <button 
-        onClick={() => setProduct("Cortinas")}
-        className={product === "Cortinas" ? styles.selected : ''}>
+          ref={ref => buttonRefs.current[0] = ref}
+          onClick={() => setProduct("Cortinas")}
+          className={product === "Cortinas" ? styles.selected : ''}>
           Cortinas
         </button>
         <button 
-        onClick={() => setProduct("Persianas")}
-        className={product === "Persianas" ? styles.selected : ''} ref={centeredButtonRef}>
+          ref={ref => { 
+            buttonRefs.current[1] = ref;
+            centeredButtonRef.current = ref;
+          }}
+          onClick={() => setProduct("Persianas")}
+          className={product === "Persianas" ? styles.selected : ''}>
           Persianas
         </button>
         <button 
-        onClick={() => setProduct("Tapetes")}
-        className={product === "Tapetes" ? styles.selected : ''}>
-          Tapetes
+          onClick={() => setProduct("Tapetes")}
+          className={product === "Tapetes" ? styles.selected : ''}>
+            Tapetes
         </button>
         <button 
-        onClick={() => setProduct("Enxovais")}
-        className={product === "Enxovais" ? styles.selected : ''}>
-          Enxovais
+          onClick={() => setProduct("Enxovais")}
+          className={product === "Enxovais" ? styles.selected : ''}>
+            Enxovais
         </button>
       </div>
 
