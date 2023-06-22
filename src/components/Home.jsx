@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
+    }, 4000);
     return () => clearInterval(timer);
   }, [images]);
 
@@ -39,8 +39,8 @@ const Home = () => {
         </div>
         
         <div>
-          <img className={styles.img_first} src={images[index % images.length]} alt="Foto do trabalho da Tok Conceito" />
-          <img className={styles.img_second} src={images[(index + 1) % images.length]} alt="Foto do trabalho da Tok Conceito" />    
+          <img className={`${styles.img_first} ${styles.fadeInOut}`} src={images[index % images.length]} alt="Foto do trabalho da Tok Conceito" />
+          <img className={`${styles.img_second} ${styles.fadeInOut}`} src={images[(index + 1) % images.length]} alt="Foto do trabalho da Tok Conceito" />
         </div>
       </div>
 
