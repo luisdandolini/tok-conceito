@@ -41,9 +41,9 @@ li, ul {
 
 @media(max-width: 1480px) {
   .swiper-button-next {
-    right: 30px !important;
+    right: 16px !important;
   }
   .swiper-button-prev {
-    left: 30px !important;
+    left: 16px !important;
   }
 }
