@@ -107,11 +107,10 @@
 .closeButton {
   position: absolute;
   top: 10px;
-  right: 10px;
-  padding: 10px;
-  background-color: #fff;
+  right: 40px;
   border: none;
   cursor: pointer;
+  color: #FFF;
 }
 
 .imageCarousel {

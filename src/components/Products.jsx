@@ -10,6 +10,8 @@ import Rolo from "../assets/persianas/rolo.jpeg";
 import Romana from "../assets/persianas/romana.png";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Icon from '@mdi/react';
+import { mdiClose } from '@mdi/js';
 
 const Products = () => {
   const [product, setProduct] = useState("Persianas");
@@ -181,9 +183,7 @@ const Products = () => {
               </div>
             ))}
           </Carousel>
-          <button className={styles.closeButton} onClick={closeCarousel}>
-            Fechar
-          </button>
+          <Icon path={mdiClose} size={1.5} className={styles.closeButton} onClick={closeCarousel} />
         </div>
       )}
 
