@@ -72,6 +72,64 @@
   border-radius: .5rem;
   font-size: 1.3rem;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.send:hover {
+  background-color: #cf923d;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.modalContent h2 {
+  margin: 0;
+  padding-bottom: 15px;
+  color: #333;
+}
+
+.modalContent button {
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  background-color: #007BFF; 
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.modalContent button:hover {
+  background-color: #0056b3; 
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
 }
 
 @media(max-width: 980px) {

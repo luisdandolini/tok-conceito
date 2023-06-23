@@ -6,12 +6,15 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [phone, setPhone] = useState('');
+  const [showModal, setShowModal] = useState(false);  
+  const [showModalError, setShowModalError] = useState(false);  
 
   function sendEmail(e) {
     e.preventDefault();
 
     if(name === '' || email === '' || message === '') {
-      alert("Preencha todos os campos")
+      setShowModalError(true);  
       return
     }
 
@@ -19,6 +22,7 @@ const Contact = () => {
       from_name: name,
       message: message,
       email: email
+      
     }
 
     emailjs.send('service_84xapi3', 'template_7jiae8q', templateParams, 'Va9st1oQUYtD-GKbX')
@@ -27,10 +31,18 @@ const Contact = () => {
       setName('')
       setEmail('')
       setMessage('')
+      setShowModal(true); 
     }, (err) => {
       console.log("ERRO: ", err)
     })
   }
+
+  function handlePhoneChange(e) {
+    const value = e.target.value;
+    if (!isNaN(value)) {
+        setPhone(value);
+    }
+}
 
   return(
     <section className={styles.footer} id="contact">
@@ -61,7 +73,13 @@ const Contact = () => {
             />
           </div>
           <div className={styles.container_mobile}>
-            <input className={styles.input} type="tel" placeholder="Telefone"/>
+            <input 
+              className={styles.input} 
+              type="tel" 
+              placeholder="Telefone"
+              onChange={handlePhoneChange}
+              value={phone}
+            />
             <input className={styles.input} type="text" placeholder="Assunto"/>
           </div>
           <div className={styles.container_mobile}>
@@ -83,6 +101,24 @@ const Contact = () => {
           </div>
         </div>
       </form>
+
+      {showModal && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Email enviado com sucesso!</h2>
+            <button onClick={() => setShowModal(false)}>Fechar</button>
+          </div>
+        </div>
+      )}
+
+      {showModalError && (
+        <div className={styles.modal}>
+          <div className={styles.modalContent}>
+            <h2>Por favor, preencha todos os campos.</h2>
+            <button onClick={() => setShowModalError(false)}>Fechar</button>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
