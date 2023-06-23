@@ -7,6 +7,7 @@ import ReviewGoogle from './components/ReviewGoogle'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WhatsApp from './components/WhatsApp'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <ReviewGoogle />
         <About />
         <Contact />
+        <WhatsApp />
       </main>
       <Footer />
     </>
