@@ -68,6 +68,18 @@ import Product6Rolo from '../assets/persianas/rolo/rolo6.jpeg'
 import Product1RM from '../assets/persianas/romana/romana1.png'
 import Product2RM from '../assets/persianas/romana/romana2.png'
 
+/* Tapetes */
+import Tapete1 from '../assets/tapete/tapete1.jpeg'
+import Tapete2 from '../assets/tapete/tapete2.jpeg'
+import Tapete3 from '../assets/tapete/tapete3.jpeg'
+import Tapete4 from '../assets/tapete/tapete4.jpeg'
+import Tapete5 from '../assets/tapete/tapete5.jpeg'
+
+/* Roupa de Cama */
+import RoupaDeCama1 from '../assets/roupa_de_cama/roupa_de_cama1.jpeg'
+import RoupaDeCama2 from '../assets/roupa_de_cama/roupa_de_cama2.jpeg'
+import RoupaDeCama3 from '../assets/roupa_de_cama/roupa_de_cama3.jpeg'
+
 const Products = () => {
   const [product, setProduct] = useState("Persianas");
   const [selectedImages, setSelectedImages] = useState([]);
@@ -137,7 +149,7 @@ const Products = () => {
           onClick={() => setProduct("Enxovais")}
           className={product === "Enxovais" ? styles.selected : ""}
         >
-          Enxovais
+          Roupa de cama
         </button>
       </div>
 
@@ -218,9 +230,79 @@ const Products = () => {
         </div>
       )}
 
-      {product === "Tapetes" && <div>Tapetes</div>}
+      {product === "Tapetes" && (
+        <div className={styles.container_images}>
+          <div className={styles.imgs}>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+            >
+              <img src={Tapete1} alt="Cortina Azul" />
+              <span className={styles.imgText}>Tapete</span>
+            </div>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+            >
+              <img src={Tapete2} alt="Cortina Marrom" />
+              <span className={styles.imgText}>Tapete</span>
+            </div>
+          </div>
+          <div className={styles.imgs}>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+            >
+              <img src={Tapete3} alt="Cortina Azul" />
+              <span className={styles.imgText}>Tapete</span>
+            </div>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+            >
+              <img src={Tapete4} alt="Cortina Marrom" />
+              <span className={styles.imgText}>Tapete</span>
+            </div>
+          </div>
+        </div>
+      )}
 
-      {product === "Enxovais" && <div>Enxovais</div>}
+      {product === "Enxovais" && (
+        <div className={styles.container_images}>
+          <div className={styles.imgs}>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+            >
+              <img src={RoupaDeCama1} alt="Cortina Azul" />
+              <span className={styles.imgText}>Roupa de cama</span>
+            </div>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+            >
+              <img src={RoupaDeCama2} alt="Cortina Marrom" />
+              <span className={styles.imgText}>Roupa de cama</span>
+            </div>
+          </div>
+          <div className={styles.imgs}>
+            <div
+              className={styles.img}
+              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+            >
+              <img src={RoupaDeCama3} alt="Cortina Azul" />
+              <span className={styles.imgText}>Roupa de cama</span>
+            </div>
+            {/* <div
+              className={styles.img}
+              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+            >
+              <img src={Tapete4} alt="Cortina Marrom" />
+              <span className={styles.imgText}>Tapete</span>
+            </div> */}
+          </div>
+        </div>
+      )}
 
       {selectedImages.length > 0 && (
         <div className={styles.carouselContainer}>
