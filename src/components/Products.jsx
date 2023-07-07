@@ -176,9 +176,9 @@ const Products = () => {
           <div className={styles.imgs}>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Produc1PW, Produc2PW, Produc3PW, Produc4PW, Produc5PW, Produc6PW, Produc7PW, Produc8PW])}
+              onClick={() => openCarousel([Produc2PW, Produc1PW, Produc3PW, Produc4PW, Produc5PW, Produc6PW, Produc7PW, Produc8PW])}
             >
-              <img src={Produc1PW} alt="Cortina Azul" />
+              <img src={Produc2PW} alt="Cortina Azul" />
               <span className={styles.imgText}>Prega Wave</span>
             </div>
 
