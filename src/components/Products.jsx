@@ -51,11 +51,12 @@ import Product7DV from '../assets/persianas/double_vision/double_vision7.jpeg'
 import Product8DV from '../assets/persianas/double_vision/double_vision8.jpeg'
 import Product9DV from '../assets/persianas/double_vision/double_vision9.jpeg'
 
-import Product1H from '../assets/persianas/horizontal/horizontal1.png'
-import Product2H from '../assets/persianas/horizontal/horizontal2.png'
-import Product3H from '../assets/persianas/horizontal/horizontal3.png'
-import Product4H from '../assets/persianas/horizontal/horizontal4.png'
-import Product5H from '../assets/persianas/horizontal/horizontal5.png'
+import Product1H from '../assets/persianas/horizontal/1.png'
+import Product2H from '../assets/persianas/horizontal/2.png'
+import Product3H from '../assets/persianas/horizontal/3.png'
+import Product4H from '../assets/persianas/horizontal/4.jpeg'
+import Product5H from '../assets/persianas/horizontal/5.jpeg'
+import Product6H from '../assets/persianas/horizontal/6.jpeg'
 
 import Product1Rolo from '../assets/persianas/rolo/rolo1.jpeg' 
 import Product2Rolo from '../assets/persianas/rolo/rolo2.jpeg' 
@@ -192,7 +193,7 @@ const Products = () => {
             </div>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Product1H, Product2H, Product3H, Product4H, Product5H])}
+              onClick={() => openCarousel([Product1H, Product2H, Product3H, Product4H, Product5H, Product6H])}
             >
               <img src={Product1H} alt="Cortina Marrom" />
               <span className={styles.imgText}>Horizontal</span>
