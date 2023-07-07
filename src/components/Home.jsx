@@ -1,8 +1,8 @@
 import styles from "../styles/Home.module.css";
-import Image4 from "../assets/cortinas/prega-macho.jpeg";
-import Image5 from "../assets/cortinas/pregra-wave.jpeg";
-import Image6 from "../assets/persianas/rolo.jpeg";
-import Image7 from "../assets/persianas/romana.png";
+import Image4 from "../assets/cortinas/prega_macho/product1.jpeg";
+import Image5 from "../assets/cortinas/prega_wave/product1.jpeg";
+import Image6 from "../assets/persianas/double_vision/double_vision1.jpeg";
+import Image7 from "../assets/persianas/romana/romana1.png";
 import { useMediaQuery } from 'react-responsive';
 import HomeMobile from "./mobile/HomeMobile";
 import { useState, useEffect } from 'react';

@@ -1,7 +1,7 @@
 import styles from '../../styles/HomeMobile.module.css';
-import Image1 from '../../assets/cortinas/prega-americana.jpeg'
-import Image2 from '../../assets/persianas/rolo.jpeg'
-import Image3 from '../../assets/persianas/double-vision.jpeg'
+import Image1 from "../../assets/cortinas/prega_macho/product1.jpeg";
+import Image2 from "../../assets/cortinas/prega_wave/product1.jpeg";
+import Image3 from "../../assets/persianas/double_vision/double_vision1.jpeg";
 import { useState, useEffect } from 'react';
 
 const HomeMobile = () => {

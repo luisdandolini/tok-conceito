@@ -1,17 +1,71 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "../styles/Products.module.css";
-import Americana from "../assets/cortinas/prega-americana.jpeg";
-import Macho from "../assets/cortinas/prega-macho.jpeg";
-import Wave from "../assets/cortinas/pregra-wave.jpeg";
-import Xale from "../assets/cortinas/Prega-Xale.jpg";
-import Double from "../assets/persianas/double-vision.jpeg";
-import Horizontal from "../assets/persianas/horizontal.jpeg";
-import Rolo from "../assets/persianas/rolo.jpeg";
-import Romana from "../assets/persianas/romana.png";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
+/* Cortinas */
+import Product1PM from '../assets/cortinas/prega_macho/product1.jpeg'
+import Product2PM from '../assets/cortinas/prega_macho/product2.jpeg'
+import Product3PM from '../assets/cortinas/prega_macho/product3.jpeg'
+import Product4PM from '../assets/cortinas/prega_macho/product4.jpeg'
+import Product5PM from '../assets/cortinas/prega_macho/product5.jpeg'
+import Product6PM from '../assets/cortinas/prega_macho/product6.jpeg'
+import Product7PM from '../assets/cortinas/prega_macho/product7.jpeg'
+import Product8PM from '../assets/cortinas/prega_macho/product8.jpeg'
+import Product9PM from '../assets/cortinas/prega_macho/product9.jpeg'
+import Product10PM from '../assets/cortinas/prega_macho/product10.jpeg'
+
+import Produc1PW from '../assets/cortinas/prega_wave/product1.jpeg'
+import Produc2PW from '../assets/cortinas/prega_wave/product2.jpeg'
+import Produc3PW from '../assets/cortinas/prega_wave/product3.jpeg'
+import Produc4PW from '../assets/cortinas/prega_wave/product4.jpeg'
+import Produc5PW from '../assets/cortinas/prega_wave/product5.jpeg'
+import Produc6PW from '../assets/cortinas/prega_wave/product6.jpeg'
+import Produc7PW from '../assets/cortinas/prega_wave/product7.jpeg'
+import Produc8PW from '../assets/cortinas/prega_wave/product8.jpeg'
+
+import Product1Xale from '../assets/cortinas/xale/product1.jpeg' 
+import Product2Xale from '../assets/cortinas/xale/product2.jpeg'
+import Product3Xale from '../assets/cortinas/xale/product3.jpeg'
+import Product4Xale from '../assets/cortinas/xale/product4.jpeg'
+import Product5Xale from '../assets/cortinas/xale/product5.jpeg'
+import Product6Xale from '../assets/cortinas/xale/product6.jpeg'
+import Product7Xale from '../assets/cortinas/xale/product7.jpeg'
+import Product8Xale from '../assets/cortinas/xale/product8.jpeg'
+
+import Product1PA from '../assets/cortinas/pregra_americana/product1.jpeg'
+import Product2PA from '../assets/cortinas/pregra_americana/product2.jpeg'
+import Product3PA from '../assets/cortinas/pregra_americana/product3.jpeg'
+import Product4PA from '../assets/cortinas/pregra_americana/product4.jpeg'
+import Product5PA from '../assets/cortinas/pregra_americana/product5.jpeg'
+
+/* Persianas */
+import Product1DV from '../assets/persianas/double_vision/double_vision1.jpeg'
+import Product2DV from '../assets/persianas/double_vision/double_vision2.jpeg'
+import Product3DV from '../assets/persianas/double_vision/double_vision3.jpeg'
+import Product4DV from '../assets/persianas/double_vision/double_vision4.jpeg'
+import Product5DV from '../assets/persianas/double_vision/double_vision5.jpeg'
+import Product6DV from '../assets/persianas/double_vision/double_vision6.jpeg'
+import Product7DV from '../assets/persianas/double_vision/double_vision7.jpeg'
+import Product8DV from '../assets/persianas/double_vision/double_vision8.jpeg'
+import Product9DV from '../assets/persianas/double_vision/double_vision9.jpeg'
+
+import Product1H from '../assets/persianas/horizontal/horizontal1.png'
+import Product2H from '../assets/persianas/horizontal/horizontal2.png'
+import Product3H from '../assets/persianas/horizontal/horizontal3.png'
+import Product4H from '../assets/persianas/horizontal/horizontal4.png'
+import Product5H from '../assets/persianas/horizontal/horizontal5.png'
+
+import Product1Rolo from '../assets/persianas/rolo/rolo1.jpeg' 
+import Product2Rolo from '../assets/persianas/rolo/rolo2.jpeg' 
+import Product3Rolo from '../assets/persianas/rolo/rolo3.jpeg' 
+import Product4Rolo from '../assets/persianas/rolo/rolo4.jpeg' 
+import Product5Rolo from '../assets/persianas/rolo/rolo5.jpeg' 
+import Product6Rolo from '../assets/persianas/rolo/rolo6.jpeg' 
+
+import Product1RM from '../assets/persianas/romana/romana1.png'
+import Product2RM from '../assets/persianas/romana/romana2.png'
 
 const Products = () => {
   const [product, setProduct] = useState("Persianas");
@@ -91,17 +145,17 @@ const Products = () => {
           <div className={styles.imgs}>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Americana, Macho, Wave, Xale])}
+              onClick={() => openCarousel([Product1PA, Product2PA, Product3PA, Product4PA, Product5PA])}
             >
-              <img src={Americana} alt="Cortina Azul" />
+              <img src={Product1PA} alt="Cortina Azul" />
               <span className={styles.imgText}>Prega Americana</span>
             </div>
 
             <div
               className={styles.img}
-              onClick={() => openCarousel([Americana, Macho, Wave, Xale])}
+              onClick={() => openCarousel([Product1PM, Product2PM, Product3PM, Product4PM, Product5PM, Product6PM, Product7PM, Product8PM, Product9PM, Product10PM])}
             >
-              <img src={Macho} alt="Cortina Marrom" />
+              <img src={Product1PM} alt="Cortina Marrom" />
               <span className={styles.imgText}>Prega Macho</span>
             </div>
           </div>
@@ -109,17 +163,17 @@ const Products = () => {
           <div className={styles.imgs}>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Americana, Macho, Wave, Xale])}
+              onClick={() => openCarousel([Produc1PW, Produc2PW, Produc3PW, Produc4PW, Produc5PW, Produc6PW, Produc7PW, Produc8PW])}
             >
-              <img src={Wave} alt="Cortina Azul" />
+              <img src={Produc1PW} alt="Cortina Azul" />
               <span className={styles.imgText}>Prega Wave</span>
             </div>
 
             <div
               className={styles.img}
-              onClick={() => openCarousel([Americana, Macho, Wave, Xale])}
+              onClick={() => openCarousel([Product1Xale, Product2Xale, Product3Xale, Product4Xale, Product5Xale, Product6Xale, Product7Xale, Product8Xale])}
             >
-              <img src={Xale} alt="Cortina Marrom" />
+              <img src={Product1Xale} alt="Cortina Marrom" />
               <span className={styles.imgText}>Xale</span>
             </div>
           </div>
@@ -131,32 +185,32 @@ const Products = () => {
           <div className={styles.imgs}>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Double, Horizontal, Rolo, Romana])}
+              onClick={() => openCarousel([Product1DV, Product2DV, Product3DV, Product4DV, Product5DV, Product6DV, Product7DV, Product8DV, Product9DV])}
             >
-              <img src={Double} alt="Cortina Azul" />
+              <img src={Product1DV} alt="Cortina Azul" />
               <span className={styles.imgText}>Double Vision</span>
             </div>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Double, Horizontal, Rolo, Romana])}
+              onClick={() => openCarousel([Product1H, Product2H, Product3H, Product4H, Product5H])}
             >
-              <img src={Horizontal} alt="Cortina Marrom" />
+              <img src={Product1H} alt="Cortina Marrom" />
               <span className={styles.imgText}>Horizontal</span>
             </div>
           </div>
           <div className={styles.imgs}>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Double, Horizontal, Rolo, Romana])}
+              onClick={() => openCarousel([Product1Rolo, Product2Rolo, Product3Rolo, Product4Rolo, Product5Rolo, Product6Rolo])}
             >
-              <img src={Rolo} alt="Cortina Azul" />
+              <img src={Product1Rolo} alt="Cortina Azul" />
               <span className={styles.imgText}>Rolô</span>
             </div>
             <div
               className={styles.img}
-              onClick={() => openCarousel([Double, Horizontal, Rolo, Romana])}
+              onClick={() => openCarousel([Product1RM, Product2RM])}
             >
-              <img src={Romana} alt="Cortina Marrom" />
+              <img src={Product1RM} alt="Cortina Marrom" />
               <span className={styles.imgText}>Romana</span>
             </div>
           </div>
