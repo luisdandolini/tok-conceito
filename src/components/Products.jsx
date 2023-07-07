@@ -207,7 +207,7 @@ const Products = () => {
               className={styles.img}
               onClick={() => openCarousel([Product1H, Product2H, Product3H, Product4H, Product5H, Product6H])}
             >
-              <img src={Product1H} alt="Cortina Marrom" />
+              <img src={Product4H} alt="Cortina Marrom" />
               <span className={styles.imgText}>Horizontal</span>
             </div>
           </div>
@@ -238,14 +238,14 @@ const Products = () => {
               onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
             >
               <img src={Tapete1} alt="Cortina Azul" />
-              <span className={styles.imgText}>Tapete</span>
+              <span className={styles.imgText}>Nylon</span>
             </div>
             <div
               className={styles.img}
               onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
             >
               <img src={Tapete2} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Tapete</span>
+              <span className={styles.imgText}>Bucle</span>
             </div>
           </div>
           <div className={styles.imgs}>
@@ -254,14 +254,14 @@ const Products = () => {
               onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
             >
               <img src={Tapete3} alt="Cortina Azul" />
-              <span className={styles.imgText}>Tapete</span>
+              <span className={styles.imgText}>Couro</span>
             </div>
             <div
               className={styles.img}
               onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
             >
               <img src={Tapete4} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Tapete</span>
+              <span className={styles.imgText}>Tecido</span>
             </div>
           </div>
         </div>
@@ -275,14 +275,14 @@ const Products = () => {
               onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
             >
               <img src={RoupaDeCama1} alt="Cortina Azul" />
-              <span className={styles.imgText}>Roupa de cama</span>
+              <span className={styles.imgText}>Colchas</span>
             </div>
             <div
               className={styles.img}
               onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
             >
               <img src={RoupaDeCama2} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Roupa de cama</span>
+              <span className={styles.imgText}>Travesseiros</span>
             </div>
           </div>
           <div className={styles.imgs}>
@@ -291,7 +291,7 @@ const Products = () => {
               onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
             >
               <img src={RoupaDeCama3} alt="Cortina Azul" />
-              <span className={styles.imgText}>Roupa de cama</span>
+              <span className={styles.imgText}>Almofadas</span>
             </div>
             {/* <div
               className={styles.img}

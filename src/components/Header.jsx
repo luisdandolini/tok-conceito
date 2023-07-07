@@ -33,7 +33,7 @@ const Header = () => {
           <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#about")}>Sobre nós</a></li>
           <li><a style={{cursor: 'pointer'}} onClick={() => smoothScroll("#contact")}>Contato</a></li>
         </ul> 
-        <button className={styles.contact}>Fale conosco</button>
+        <button className={styles.contact} onClick={() => smoothScroll("#contact")}>Fale conosco</button>
       </nav> 
     </header> 
   )
