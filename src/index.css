@@ -45,6 +45,10 @@ li, ul {
   display: none !important;
 }
 
+.slider-wrapper.axis-horizontal{
+  height: 100vh !important;
+} 
+
 @media(max-width: 1480px) {
   .swiper-button-next {
     right: 16px !important;
