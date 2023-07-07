@@ -34,8 +34,8 @@ const Home = () => {
 
       <div className={styles.container_content}>
         <div className={styles.content_text}>
-          <h1>Sua casa ainda mais <br /> <span>acolhedora</span></h1>
-          <p>Transforme sua casa em um espaço sofisticado e aconchegante com nossa ampla variedade de cortinas, persianas e almofadas.</p>
+          <h1>Um novo conceito em <br /> vestir <span>lares</span></h1>
+          <p></p>
         </div>
         
         <div>

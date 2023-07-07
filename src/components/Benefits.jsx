@@ -1,7 +1,9 @@
 import styles from "../styles/Benefits.module.css";
-import Vector from "../assets/Vector.svg";
 import Truck from "../assets/truck.svg";
 import Award from "../assets/award.svg";
+import Professional from '../assets/Frame 100.svg'
+import Service from '../assets/Frame 98.svg'
+import Product from '../assets/Frame 99.svg'
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import BenefitsMobile from "./mobile/BenefitsMobile";
@@ -21,27 +23,44 @@ const Benefits = () => {
   return(
     <section className={styles.benefits}>
       <div className={styles.container_benefits}>
-        <div className={styles.content}>
-          <img src={Award} alt="" />
-          <div>
-            <p className={styles.title}>Alta qualidade</p>
-            <p className={styles.text}>O material é resistente</p>
-          </div>
-        </div>
+        <div className={styles.container_father_benefits}>
+          <div className={styles.container_first}>
+            <div className={styles.content}>
+              <img src={Award} alt="" />
+              <div>
+                <p className={styles.title}>Material de alta qualidade</p>
+              </div>
+            </div>
 
-        <div className={styles.content}>
-          <img src={Vector} alt="" />
-          <div>
-            <p className={styles.title}>Garantia extendida</p>
-            <p className={styles.text}>de até dois anos</p>
-          </div>
-        </div>
+            <div className={styles.content}>
+              <img src={Professional} alt="" />
+              <div>
+                <p className={styles.title}>Profissionais qualificados</p>
+              </div>
+            </div>
 
-        <div className={styles.content}>
-          <img src={Truck} alt="" />
-          <div>
-            <p className={styles.title}>Frete grátis</p>
-            <p className={styles.text}>Pedidos acima de R$3000</p>
+            <div className={styles.content}>
+              <img src={Service} alt="" />
+              <div>
+                <p className={styles.title}>Atendimento personalizado</p>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.container_second}>
+            <div className={styles.content}>
+              <img src={Truck} alt="" />
+              <div>
+                <p className={styles.title}>Garantia extendida</p>
+              </div>
+            </div>
+
+            <div className={styles.content}>
+              <img src={Product} alt="" />
+              <div>
+                <p className={styles.title}>Produtos sob medida</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

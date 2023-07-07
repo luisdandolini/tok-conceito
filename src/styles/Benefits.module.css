@@ -1,6 +1,6 @@
 .benefits {
   background-color: #212121;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   margin-top: -6.5rem;
 }
 
@@ -19,11 +19,11 @@
   justify-content: center;
   align-items: center;
   gap: 2.378rem;
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #CFCFCF;
   line-height: 2rem;
@@ -35,6 +35,15 @@
   font-weight: 300;
   font-size: 1rem;
   color: #CFCFCF;
+}
+
+.container_first,
+.container_second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media(max-width: 1380px) {

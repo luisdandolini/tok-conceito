@@ -27,8 +27,6 @@ const HomeMobile = () => {
           alt=""
         />
         <p className={styles.text}>
-          Transforme sua casa em um espaço sofisticado e aconchegante com nossa
-          ampla variedade de cortinas, persianas e almofadas.
         </p>
       </div>
 
