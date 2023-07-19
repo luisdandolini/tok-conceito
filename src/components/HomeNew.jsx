@@ -2,16 +2,16 @@ import styles from '../styles/HomeNew.module.css';
 import Logo from "../assets/Logo.svg"
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Image5 from "../assets/cortinas/prega_macho/product2.jpeg";
-import Image6 from "../assets/cortinas/xale/product1.jpeg";
-import Image7 from "../assets/persianas/horizontal/5.jpeg";
-import Image10 from "../assets/roupa_de_cama/roupa_de_cama1.jpeg"
+import ImageFirst from "../assets/Mask1.png";
+import ImageSecond from "../assets/Mask2.png";
+import ImageThird from "../assets/Mask3.png";
+import ImageFourth from "../assets/Mask4.png";
 import HomeNewMobile from './mobile/HomeNewMobile';
 
 const HomeNew = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
-  const [images, setImages] = useState([Image10, Image5, Image6, Image7]);
+  const [images, setImages] = useState([ImageFirst, ImageSecond, ImageThird, ImageFourth]);
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const [scrolled, setScrolled] = useState(false);
