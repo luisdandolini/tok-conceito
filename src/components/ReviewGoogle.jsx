@@ -28,7 +28,7 @@ export default function ReviewGoogle() {
         setSlidesPerView(1);
         setSpaceBetween(20);
       } else if (window.innerWidth < 1380) {  // para telas médias
-        setSlidesPerView(1);
+        setSlidesPerView(3);
         setSpaceBetween(-30);
       } else if (window.innerWidth < 1480) {  // para telas médias
         setSlidesPerView(4);
@@ -48,7 +48,7 @@ export default function ReviewGoogle() {
   return (
     <>
       {
-        window.innerWidth < 1380 ? <h1 className={styles.title}>Depoimentos</h1> : <></>
+        window.innerWidth < 980 ? <h1 className={styles.title}>Depoimentos</h1> : <></>
       }
       <section className={styles.container_google} id='review'>
       <Swiper 
