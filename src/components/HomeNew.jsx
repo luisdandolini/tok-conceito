@@ -21,7 +21,6 @@ const HomeNew = () => {
     sectionElement.scrollIntoView({
         behavior: 'smooth'
     });
-    // Scroll adjustment
     const yCoordinate = sectionElement.getBoundingClientRect().top + window.pageYOffset;
     const yOffset = -offset; 
     window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
@@ -37,9 +36,8 @@ const HomeNew = () => {
   useEffect(() => {
     const onScroll = () => {
       const scrollPos = window.scrollY;
-      const homeHeight = document.getElementById("home").offsetHeight;
 
-      if (scrollPos > homeHeight) {
+      if (scrollPos > 0) {
         setScrolled(true);
       } else {
         setScrolled(false);
