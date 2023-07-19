@@ -1,9 +1,11 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Products.module.css";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Icon from '@mdi/react';
 import { mdiClose } from '@mdi/js';
+import { useMediaQuery } from 'react-responsive';
+
 /* Cortinas */
 import Product1PM from '../assets/cortinas/prega_macho/product1.jpeg'
 import Product2PM from '../assets/cortinas/prega_macho/product2.jpeg'
@@ -79,12 +81,12 @@ import Tapete5 from '../assets/tapete/tapete5.jpeg'
 import RoupaDeCama1 from '../assets/roupa_de_cama/roupa_de_cama1.jpeg'
 import RoupaDeCama2 from '../assets/roupa_de_cama/roupa_de_cama2.jpeg'
 import RoupaDeCama3 from '../assets/roupa_de_cama/roupa_de_cama3.jpeg'
+import ProductsMobile from "./mobile/ProductsMobile";
 
 const Products = () => {
-  const [product, setProduct] = useState("Persianas");
   const [selectedImages, setSelectedImages] = useState([]);
-  const centeredButtonRef = useRef(null);
-  const buttonRefs = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
+  const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
 
   const openCarousel = (images) => {
     setSelectedImages(images);
@@ -95,214 +97,177 @@ const Products = () => {
   };
 
   useEffect(() => {
-    const container = centeredButtonRef.current.parentNode;
-    const scrollLeft = centeredButtonRef.current.offsetLeft - (container.offsetWidth / 2) + (centeredButtonRef.current.offsetWidth / 2);
-    container.scrollLeft = scrollLeft;
-  }, []);
+    setIsMobile(isMobileQuery);
+  }, [isMobileQuery]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const buttonWidth = buttonRefs.current[0].offsetWidth;
-      const scrollPos = buttonRefs.current[0].parentNode.scrollLeft;
-      const index = Math.round(scrollPos / buttonWidth);
-
-      setProduct(["Cortinas", "Persianas", "Tapetes", "Enxovais"][index]);
-    };
-
-    const container = buttonRefs.current[0].parentNode;
-    container.addEventListener('scroll', handleScroll);
-
-    handleScroll();
-
-    return () => {
-      container.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  if (isMobile) {
+    return <ProductsMobile />;
+  }
 
   return (
     <section id="product">
-      <div className={styles.container_buttons}>
-        <button
-          ref={(ref) => (buttonRefs.current[0] = ref)}
-          onClick={() => setProduct("Cortinas")}
-          className={product === "Cortinas" ? styles.selected : ""}
-        >
-          Cortinas
-        </button>
-        <button
-          ref={(ref) => {
-            buttonRefs.current[1] = ref;
-            centeredButtonRef.current = ref;
-          }}
-          onClick={() => setProduct("Persianas")}
-          className={product === "Persianas" ? styles.selected : ""}
-        >
-          Persianas
-        </button>
-        <button
-          onClick={() => setProduct("Tapetes")}
-          className={product === "Tapetes" ? styles.selected : ""}
-        >
-          Tapetes
-        </button>
-        <button
-          onClick={() => setProduct("Enxovais")}
-          className={product === "Enxovais" ? styles.selected : ""}
-        >
-          Roupa de cama
-        </button>
+
+      <div className={styles.container_images}>
+        <div>
+          <p className={styles.title_products}>Cortinas</p>
+          <div className={styles.container_content_imgs}>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1PA, Product2PA, Product3PA, Product4PA, Product5PA])}
+              >
+                <img src={Product1PA} alt="Cortina Azul" />
+                <span className={styles.imgText}>Prega Americana</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1PM, Product2PM, Product3PM, Product4PM, Product5PM, Product6PM, Product7PM, Product8PM, Product9PM, Product10PM])}
+              >
+                <img src={Product1PM} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Prega Macho</span>
+              </div>
+            </div>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Produc2PW, Produc1PW, Produc3PW, Produc4PW, Produc5PW, Produc6PW, Produc7PW, Produc8PW])}
+              >
+                <img src={Produc2PW} alt="Cortina Azul" />
+                <span className={styles.imgText}>Prega Wave</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1Xale, Product2Xale, Product3Xale, Product4Xale, Product5Xale, Product6Xale, Product7Xale, Product8Xale])}
+              >
+                <img src={Product1Xale} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Xale</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className={styles.container_images}>
+        <div>
+          <p className={styles.title_products}>Persianas</p> 
+          <div className={styles.container_content_imgs}>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1DV, Product2DV, Product3DV, Product4DV, Product5DV, Product6DV, Product7DV, Product8DV, Product9DV])}
+              >
+                <img src={Product1DV} alt="Cortina Azul" />
+                <span className={styles.imgText}>Double Vision</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product4H, Product2H, Product3H, Product1H, Product5H, Product6H])}
+              >
+                <img src={Product4H} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Horizontal</span>
+              </div>
+            </div>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1Rolo, Product2Rolo, Product3Rolo, Product4Rolo, Product5Rolo, Product6Rolo])}
+              >
+                <img src={Product1Rolo} alt="Cortina Azul" />
+                <span className={styles.imgText}>Rolô</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Product1RM, Product2RM])}
+              >
+                <img src={Product1RM} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Romana</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {product === "Cortinas" && (
-        <div className={styles.container_images}>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1PA, Product2PA, Product3PA, Product4PA, Product5PA])}
-            >
-              <img src={Product1PA} alt="Cortina Azul" />
-              <span className={styles.imgText}>Prega Americana</span>
+      <div className={styles.container_images}>
+        <div>
+          <p className={styles.title_products}>Tapetes</p>
+          <div className={styles.container_content_imgs}>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+              >
+                <img src={Tapete1} alt="Cortina Azul" />
+                <span className={styles.imgText}>Nylon</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+              >
+                <img src={Tapete2} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Bucle</span>
+              </div>
             </div>
-
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1PM, Product2PM, Product3PM, Product4PM, Product5PM, Product6PM, Product7PM, Product8PM, Product9PM, Product10PM])}
-            >
-              <img src={Product1PM} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Prega Macho</span>
-            </div>
-          </div>
-
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Produc2PW, Produc1PW, Produc3PW, Produc4PW, Produc5PW, Produc6PW, Produc7PW, Produc8PW])}
-            >
-              <img src={Produc2PW} alt="Cortina Azul" />
-              <span className={styles.imgText}>Prega Wave</span>
-            </div>
-
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1Xale, Product2Xale, Product3Xale, Product4Xale, Product5Xale, Product6Xale, Product7Xale, Product8Xale])}
-            >
-              <img src={Product1Xale} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Xale</span>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {product === "Persianas" && (
-        <div className={styles.container_images}>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1DV, Product2DV, Product3DV, Product4DV, Product5DV, Product6DV, Product7DV, Product8DV, Product9DV])}
-            >
-              <img src={Product1DV} alt="Cortina Azul" />
-              <span className={styles.imgText}>Double Vision</span>
-            </div>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product4H, Product2H, Product3H, Product1H, Product5H, Product6H])}
-            >
-              <img src={Product4H} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Horizontal</span>
-            </div>
-          </div>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1Rolo, Product2Rolo, Product3Rolo, Product4Rolo, Product5Rolo, Product6Rolo])}
-            >
-              <img src={Product1Rolo} alt="Cortina Azul" />
-              <span className={styles.imgText}>Rolô</span>
-            </div>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Product1RM, Product2RM])}
-            >
-              <img src={Product1RM} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Romana</span>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+              >
+                <img src={Tapete3} alt="Cortina Azul" />
+                <span className={styles.imgText}>Couro</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
+              >
+                <img src={Tapete4} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Tecido</span>
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
 
-      {product === "Tapetes" && (
-        <div className={styles.container_images}>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
-            >
-              <img src={Tapete1} alt="Cortina Azul" />
-              <span className={styles.imgText}>Nylon</span>
+      <div className={styles.container_images}>
+        <div>
+          <p className={styles.title_products}>Roupa de Cama</p>
+          <div className={styles.container_content_imgs}>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+              >
+                <img src={RoupaDeCama1} alt="Cortina Azul" />
+                <span className={styles.imgText}>Colchas</span>
+              </div>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+              >
+                <img src={RoupaDeCama2} alt="Cortina Marrom" />
+                <span className={styles.imgText}>Travesseiros</span>
+              </div>
             </div>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
-            >
-              <img src={Tapete2} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Bucle</span>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+              >
+                <img src={RoupaDeCama3} alt="Cortina Azul" />
+                <span className={styles.imgText}>Almofadas</span>
+              </div>
             </div>
-          </div>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
-            >
-              <img src={Tapete3} alt="Cortina Azul" />
-              <span className={styles.imgText}>Couro</span>
-            </div>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
-            >
-              <img src={Tapete4} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Tecido</span>
+            <div className={styles.imgs}>
+              <div
+                className={styles.img}
+                onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
+              >
+                <img src={RoupaDeCama3} alt="Cortina Azul" />
+                <span className={styles.imgText}>Almofadas</span>
+              </div>
             </div>
           </div>
         </div>
-      )}
-
-      {product === "Enxovais" && (
-        <div className={styles.container_images}>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
-            >
-              <img src={RoupaDeCama1} alt="Cortina Azul" />
-              <span className={styles.imgText}>Colchas</span>
-            </div>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
-            >
-              <img src={RoupaDeCama2} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Travesseiros</span>
-            </div>
-          </div>
-          <div className={styles.imgs}>
-            <div
-              className={styles.img}
-              onClick={() => openCarousel([RoupaDeCama1, RoupaDeCama2, RoupaDeCama3])}
-            >
-              <img src={RoupaDeCama3} alt="Cortina Azul" />
-              <span className={styles.imgText}>Almofadas</span>
-            </div>
-            {/* <div
-              className={styles.img}
-              onClick={() => openCarousel([Tapete1, Tapete2, Tapete3, Tapete4, Tapete5])}
-            >
-              <img src={Tapete4} alt="Cortina Marrom" />
-              <span className={styles.imgText}>Tapete</span>
-            </div> */}
-          </div>
-        </div>
-      )}
+      </div>
 
       {selectedImages.length > 0 && (
         <div className={styles.carouselContainer}>
