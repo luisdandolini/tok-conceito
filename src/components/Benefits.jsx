@@ -45,9 +45,7 @@ const Benefits = () => {
                 <p className={styles.title}>Atendimento personalizado</p>
               </div>
             </div>
-          </div>
-
-          <div className={styles.container_second}>
+            
             <div className={styles.content}>
               <img src={Truck} alt="" />
               <div>
