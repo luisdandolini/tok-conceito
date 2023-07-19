@@ -203,8 +203,8 @@
 
 @media(max-width: 1380px) {
   .container_content {
-    padding-top: 0rem;
-    margin-left: 4rem;
+    padding-top: 10rem;
+    margin-left: 1rem;
   }
   .img_first {
     width: 222px;
@@ -226,5 +226,16 @@
   .content_text p {
     margin-top: -5rem;
     font-size: 1.5rem;
+  }
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 32%;
+    background-color: #C8882C;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    top: 691px !important;
   }
 }
