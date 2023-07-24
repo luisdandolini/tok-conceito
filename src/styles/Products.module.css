@@ -127,7 +127,7 @@
 }
 
 .imageCarousel {
-  width: 47% !important;
+  width: 27% !important;
   max-height: 40% !important;
 }
 
@@ -139,6 +139,13 @@
   100% {
     width: 50%;
     left: -2%;
+  }
+}
+
+@media(max-width: 1440px) {
+  .imageCarousel {
+    width: 38% !important;
+    max-height: 40% !important;
   }
 }
 
