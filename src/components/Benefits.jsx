@@ -1,5 +1,4 @@
 import styles from "../styles/Benefits.module.css";
-import Truck from "../assets/truck.svg";
 import Award from "../assets/award.svg";
 import Professional from '../assets/Frame 100.svg'
 import Service from '../assets/Frame 98.svg'
@@ -43,13 +42,6 @@ const Benefits = () => {
               <img src={Service} alt="" />
               <div>
                 <p className={styles.title}>Atendimento personalizado</p>
-              </div>
-            </div>
-            
-            <div className={styles.content}>
-              <img src={Truck} alt="" />
-              <div>
-                <p className={styles.title}>Garantia extendida</p>
               </div>
             </div>
 
