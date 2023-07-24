@@ -66,9 +66,9 @@
 }
 
 .img img {
-  width: 330px;
+  /* width: 330px; */
   height: 360px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .img:hover .imgText {

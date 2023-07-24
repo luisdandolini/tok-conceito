@@ -114,9 +114,9 @@ const Products = () => {
             <div className={styles.imgs}>
               <div
                 className={styles.img}
-                onClick={() => openCarousel([Product1PA, Product2PA, Product3PA, Product4PA, Product5PA])}
+                onClick={() => openCarousel([Product5PA, Product2PA, Product3PA, Product4PA, Product1PA])}
               >
-                <img src={Product1PA} alt="Cortina Azul" />
+                <img src={Product3PA} alt="Cortina Azul" />
                 <span className={styles.imgText}>Prega Americana</span>
               </div>
               <div
@@ -179,7 +179,7 @@ const Products = () => {
                 className={styles.img}
                 onClick={() => openCarousel([Product1RM, Product2RM])}
               >
-                <img src={Product1RM} alt="Cortina Marrom" />
+                <img src={Product2RM} alt="Cortina Marrom" />
                 <span className={styles.imgText}>Romana</span>
               </div>
             </div>
