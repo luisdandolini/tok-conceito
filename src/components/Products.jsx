@@ -45,13 +45,9 @@ import Product5PA from '../assets/cortinas/pregra_americana/product5.jpeg'
 /* Persianas */
 import Product1DV from '../assets/persianas/double_vision/double_vision1.jpeg'
 import Product2DV from '../assets/persianas/double_vision/double_vision2.jpeg'
-import Product3DV from '../assets/persianas/double_vision/double_vision3.jpeg'
 import Product4DV from '../assets/persianas/double_vision/double_vision4.jpeg'
-import Product5DV from '../assets/persianas/double_vision/double_vision5.jpeg'
 import Product6DV from '../assets/persianas/double_vision/double_vision6.jpeg'
-import Product7DV from '../assets/persianas/double_vision/double_vision7.jpeg'
 import Product8DV from '../assets/persianas/double_vision/double_vision8.jpeg'
-import Product9DV from '../assets/persianas/double_vision/double_vision9.jpeg'
 
 import Product1H from '../assets/persianas/horizontal/1.png'
 import Product2H from '../assets/persianas/horizontal/2.png'
@@ -154,7 +150,7 @@ const Products = () => {
             <div className={styles.imgs}>
               <div
                 className={styles.img}
-                onClick={() => openCarousel([Product1DV, Product2DV, Product3DV, Product4DV, Product5DV, Product6DV, Product7DV, Product8DV, Product9DV])}
+                onClick={() => openCarousel([Product1DV, Product2DV, Product4DV, Product6DV, Product8DV])}
               >
                 <img src={Product1DV} alt="Cortina Azul" />
                 <span className={styles.imgText}>Double Vision</span>

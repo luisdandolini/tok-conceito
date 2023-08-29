@@ -1,4 +1,3 @@
-import './App.css'
 import Benefits from './components/Benefits'
 import Products from './components/Products'
 import ReviewGoogle from './components/ReviewGoogle'

@@ -127,8 +127,9 @@
 }
 
 .imageCarousel {
-  width: 27% !important;
+  width: 22% !important;
   max-height: 40% !important;
+  margin-top: 5rem;
 }
 
 @keyframes reveal {
@@ -144,8 +145,9 @@
 
 @media(max-width: 1440px) {
   .imageCarousel {
-    width: 38% !important;
+    width: 32% !important;
     max-height: 40% !important;
+    margin-top: 5rem;
   }
 }
 
