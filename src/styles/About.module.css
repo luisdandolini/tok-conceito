@@ -45,7 +45,7 @@
 
 @media(max-width: 980px) {
   .about {
-    margin-top: 2rem;
+    margin-top: 7rem;
     margin-bottom: 4rem;
     flex-direction: column;
   }
