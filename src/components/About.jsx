@@ -1,5 +1,5 @@
 import styles from "../styles/About.module.css";
-import AboutImg from "../assets/cortinas/prega_macho/product2.jpeg";
+import AboutImg from "../assets/People.jpg";
 
 const About = () => {
   return(

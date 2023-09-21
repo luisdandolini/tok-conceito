@@ -132,6 +132,12 @@
   margin-top: 5rem;
 }
 
+.romana {
+  height: 360px !important;
+  width: 270px !important;
+  object-fit: none !important;
+}
+
 @keyframes reveal {
   0% {
     width: 0;
