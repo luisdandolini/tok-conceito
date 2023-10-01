@@ -202,6 +202,45 @@
   }
 }
 
+@media(max-width: 1440px) {
+  .container_content {
+    padding-top: 10rem;
+    margin-left: 1rem;
+  }
+  .img_first {
+    width: 222px;
+    height: 353px;
+    position: relative;
+    top: 100px;
+    left: -235px;
+  }
+  .img_second {
+    width: 222px;
+    height: 353px;
+    position: relative;
+    left: 0px;
+    top: -172px;
+  }
+  .content_text h1 {
+    margin-bottom: 7rem;
+  }
+  .content_text p {
+    margin-top: -5rem;
+    font-size: 1.5rem;
+  }
+  .details_bottom::after {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 32%;
+    background-color: #C8882C;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    top: 704px !important;
+  }
+}
+
 @media(max-width: 1380px) {
   .container_content {
     padding-top: 10rem;
@@ -237,6 +276,6 @@
     position: absolute;
     right: 0;
     bottom: 0px;
-    top: 691px !important;
+    top: 705px !important;
   }
 }
